@@ -1,0 +1,38 @@
+{
+  "id": "e0645aed-5774-43ec-822a-a823e2ccf0da",
+  "name": "TaskSeconds",
+  "publisher": "Stijn The Awsome",
+  "version": "23.0.231110.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "23.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "target": "OnPrem",
+  "supportedLocales":  [
+                           "en-US",
+                           "nl-BE"
+                       ],
+  "runtime": "12.0",
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile"
+  ]
+}

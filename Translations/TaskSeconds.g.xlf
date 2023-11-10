@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="TaskSeconds">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 701411680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Task Seconds Config</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 701411680 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 701411680 - Field 893385458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Codeunit ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 701411680 - Field 2967582120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Codeunit Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 701411680 - Field 799415180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Server Instance ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Current Server Instance ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 701411680 - Field 2710580766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Current Session ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Current Session ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 701411680 - Field 2955448056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Interval Seconds</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Interval Seconds - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Task Seconds Log</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 893385458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Codeunit ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 2485164427 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Entry ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 1019619766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Is Error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Is Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 3032596473 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logged At</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Logged At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 2249337131 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logged By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Logged By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 3080618677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Message</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Message - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 3975658731 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Server Instance ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Server Instance ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1722623038 - Field 1829104285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Session ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Log - Field Session ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4077003955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active Sessions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Active Sessions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4077003955 - Action 3351315858 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Stop session</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Active Sessions - Action StopSession - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 701411680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Task Seconds Config</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Task Seconds Config - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 701411680 - NamedType 749275874" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starter codeunit is not running on the job queue.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Task Seconds Config - NamedType NotStartedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 701411680 - NamedType 2962635917" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starter codeunit is running on the job queue.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Task Seconds Config - NamedType StartedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 701411680 - Action 4237244370 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Clear Current Session</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Task Seconds Config - Action ClearCurrentSession - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 701411680 - Action 88963476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Starter Job</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Task Seconds Config - Action StartStarterJob - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 701411680 - Action 579823193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Stop Current Session</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Task Seconds Config - Action StopCurrentSession - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1722623038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Task Seconds Log</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Task Seconds Log - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
