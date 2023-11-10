@@ -11,6 +11,11 @@ table 50100 "Task Seconds Config"
             DataClassification = CustomerContent;
             Caption = 'Codeunit ID';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Codeunit));
+
+            trigger OnValidate()
+            begin
+                CheckCanModify();
+            end;
         }
         field(2; "Codeunit Name"; Text[30])
         {
@@ -25,6 +30,11 @@ table 50100 "Task Seconds Config"
             MinValue = 1;
             MaxValue = 60;
             InitValue = 1;
+
+            trigger OnValidate()
+            begin
+                CheckCanModify();
+            end;
         }
         field(4; "Current Server Instance ID"; Integer)
         {
@@ -52,6 +62,23 @@ table 50100 "Task Seconds Config"
             Clustered = true;
         }
     }
+
+    trigger OnModify()
+    begin
+        CheckCanModify();
+    end;
+
+    local procedure CheckCanModify()
+    var
+        RunningErrorLbl: Label 'Codeunit %1 is running. First stop the session, set active off and edit.', Comment = '%1 = codeunit ID';
+        ActiveErrorLbl: Label 'Codeunit %1 is not running but is active. Set active off to edit.', Comment = '%1 = codeunit ID';
+    begin
+        if Rec.IsTaskActive() then
+            Error(RunningErrorLbl, Rec."Codeunit ID");
+
+        if Rec.Active then
+            Error(ActiveErrorLbl, Rec."Codeunit ID");
+    end;
 
     procedure IsTaskActive(): Boolean
     var
