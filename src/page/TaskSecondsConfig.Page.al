@@ -16,6 +16,7 @@ page 50100 "Task Seconds Config"
                 ShowCaption = false;
                 StyleExpr = StarterStyleExpr;
                 DrillDown = true;
+                Editable = false;
 
                 trigger OnDrillDown()
                 var

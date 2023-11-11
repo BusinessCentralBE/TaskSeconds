@@ -8,6 +8,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 701411680 - Method 2214152854 - NamedType 926001607" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit %1 is running. First stop the session, set active off and edit.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = codeunit ID</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Method CheckCanModify - NamedType RunningErrorLbl</note>
+        </trans-unit>
+        <trans-unit id="Table 701411680 - Method 2214152854 - NamedType 1994824050" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Codeunit %1 is not running but is active. Set active off to edit.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = codeunit ID</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Method CheckCanModify - NamedType ActiveErrorLbl</note>
+        </trans-unit>
         <trans-unit id="Table 701411680 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Active</source>
           <note from="Developer" annotates="general" priority="2"></note>

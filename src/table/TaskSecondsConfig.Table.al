@@ -63,7 +63,7 @@ table 50100 "Task Seconds Config"
         }
     }
 
-    trigger OnModify()
+    trigger OnDelete()
     begin
         CheckCanModify();
     end;
