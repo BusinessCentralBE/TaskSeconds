@@ -53,6 +53,13 @@ table 50100 "Task Seconds Config"
             DataClassification = CustomerContent;
             Caption = 'Active';
         }
+        field(7; "Max Retries"; Integer)
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Max Retries';
+            MinValue = 1;
+            InitValue = 5;
+        }
     }
 
     keys
@@ -123,6 +130,29 @@ table 50100 "Task Seconds Config"
     procedure InsertError(ErrorMsg: Text)
     begin
         InsertMessage(ErrorMsg, true);
+    end;
+
+    procedure CheckMaxRetries()
+    var
+        TaskSecondsLog: Record "Task Seconds Log";
+        Retries: Integer;
+    begin
+        TaskSecondsLog.SetRange("Codeunit ID", Rec."Codeunit ID");
+        TaskSecondsLog.SetRange("Server Instance ID", Rec."Current Server Instance ID");
+        TaskSecondsLog.Ascending(false);
+        if TaskSecondsLog.FindSet() then
+            repeat
+                if not TaskSecondsLog."Is Error" then
+                    exit;
+
+                Retries += 1;
+            until (TaskSecondsLog.Next() < 1) or (Retries >= Rec."Max Retries");
+
+        if Retries >= Rec."Max Retries" then begin
+            StopTask(true);
+            Rec.Active := false;
+            Rec.Modify(true);
+        end;
     end;
 
 }

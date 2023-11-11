@@ -41,26 +41,32 @@ page 50100 "Task Seconds Config"
                 field(Active; Rec.Active)
                 {
                     ApplicationArea = All;
+                    StyleExpr = ConfigStyleExpr;
                 }
                 field("Codeunit ID"; Rec."Codeunit ID")
                 {
                     ApplicationArea = All;
+                    StyleExpr = ConfigStyleExpr;
                 }
                 field("Codeunit Name"; Rec."Codeunit Name")
                 {
                     ApplicationArea = All;
+                    StyleExpr = ConfigStyleExpr;
                 }
                 field("Interval Seconds"; Rec."Interval Seconds")
                 {
                     ApplicationArea = All;
+                    StyleExpr = ConfigStyleExpr;
                 }
                 field("Current Server Instance ID"; Rec."Current Server Instance ID")
                 {
                     ApplicationArea = All;
+                    StyleExpr = ConfigStyleExpr;
                 }
                 field("Current Session ID"; Rec."Current Session ID")
                 {
                     ApplicationArea = All;
+                    StyleExpr = ConfigStyleExpr;
                 }
             }
 
@@ -94,6 +100,7 @@ page 50100 "Task Seconds Config"
                 ApplicationArea = All;
                 Caption = 'Stop Current Session';
                 Image = Delete;
+                Enabled = IsConfigRunning;
 
                 trigger OnAction()
                 begin
@@ -162,6 +169,8 @@ page 50100 "Task Seconds Config"
 
     var
         IsStarterRunning: Boolean;
+        IsConfigRunning: Boolean;
+        ConfigStyleExpr: Text;
         StarterStatusTxt: Text;
         StarterStyleExpr: Text;
         NotStartedLbl: Label 'Starter codeunit is not running on the job queue.';
@@ -186,6 +195,20 @@ page 50100 "Task Seconds Config"
         end else begin
             StarterStyleExpr := 'Unfavorable';
             StarterStatusTxt := NotStartedLbl;
+        end;
+    end;
+
+    trigger OnAfterGetRecord()
+    begin
+        ConfigStyleExpr := 'Standard';
+        IsConfigRunning := false;
+
+        if Rec.Active then begin
+            IsConfigRunning := Rec.IsTaskActive();
+            if IsConfigRunning then
+                ConfigStyleExpr := 'Favorable'
+            else
+                ConfigStyleExpr := 'Unfavorable';
         end;
     end;
 }
