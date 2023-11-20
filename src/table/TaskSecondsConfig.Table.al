@@ -99,7 +99,8 @@ table 50100 "Task Seconds Config"
             Rec."Current Server Instance ID" := ServiceInstanceId();
             Rec.Modify(true);
             exit(true);
-        end;
+        end else
+            Rec.InsertError('Task started failed!');
 
         exit(false);
     end;
