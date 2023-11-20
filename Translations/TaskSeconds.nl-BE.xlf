@@ -57,6 +57,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Interval Seconds - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 701411680 - Field 1070463934 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max Retries</source>
+          <target>Aantal pogingen</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Task Seconds Config - Field Max Retries - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1722623038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Task Seconds Log</source>
           <target state="translated">Seconden taak logboek</target>

@@ -57,8 +57,7 @@ table 50100 "Task Seconds Config"
         {
             DataClassification = CustomerContent;
             Caption = 'Max Retries';
-            MinValue = 1;
-            InitValue = 5;
+            MinValue = 0;
         }
     }
 
@@ -104,6 +103,7 @@ table 50100 "Task Seconds Config"
         if Started then begin
             Rec."Current Server Instance ID" := ServiceInstanceId();
             Rec.Modify(true);
+            Rec.InsertMessage('Task started.', false);
             exit(true);
         end;
 
@@ -118,6 +118,7 @@ table 50100 "Task Seconds Config"
         Rec."Current Server Instance ID" := 0;
         Rec."Current Session ID" := 0;
         Rec.Modify(true);
+        Rec.InsertMessage('Task stopped.', false);
     end;
 
     procedure InsertMessage(Message: Text; IsError: Boolean)
@@ -146,9 +147,9 @@ table 50100 "Task Seconds Config"
                     exit;
 
                 Retries += 1;
-            until (TaskSecondsLog.Next() < 1) or (Retries >= Rec."Max Retries");
+            until (TaskSecondsLog.Next() < 1) or (Retries = Rec."Max Retries");
 
-        if Retries >= Rec."Max Retries" then begin
+        if Retries = Rec."Max Retries" then begin
             StopTask(true);
             Rec.Active := false;
             Rec.Modify(true);

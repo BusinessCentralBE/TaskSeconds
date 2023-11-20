@@ -58,6 +58,11 @@ page 50100 "Task Seconds Config"
                     ApplicationArea = All;
                     StyleExpr = ConfigStyleExpr;
                 }
+                field("Max Retries"; Rec."Max Retries")
+                {
+                    ApplicationArea = All;
+                    StyleExpr = ConfigStyleExpr;
+                }
                 field("Current Server Instance ID"; Rec."Current Server Instance ID")
                 {
                     ApplicationArea = All;

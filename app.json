@@ -2,7 +2,7 @@
   "id": "e0645aed-5774-43ec-822a-a823e2ccf0da",
   "name": "TaskSeconds",
   "publisher": "Stijn The Awsome",
-  "version": "23.0.231110.0",
+  "version": "23.0.231120.0",
   "brief": "Enable the execution of codeunit(s) with an interval of seconds.",
   "description": "Enable the execution of codeunit(s) with an interval of seconds.",
   "privacyStatement": "",
