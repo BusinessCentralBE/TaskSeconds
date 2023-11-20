@@ -14,8 +14,6 @@ codeunit 50101 "Task Seconds Runner"
             if not Codeunit.Run(Rec."Codeunit ID", Rec) then begin
                 ErrorMsg := GetLastErrorText();
                 Rec.InsertError(ErrorMsg);
-                Rec.CheckMaxRetries();
-                Commit();
                 Error(ErrorMsg);
             end;
 

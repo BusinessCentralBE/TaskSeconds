@@ -63,6 +63,10 @@ table 50101 "Task Seconds Log"
         {
             Clustered = true;
         }
+        key(KEY1; "Is Error")
+        {
+
+        }
     }
 
     trigger OnInsert()

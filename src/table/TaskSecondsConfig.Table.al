@@ -53,12 +53,6 @@ table 50100 "Task Seconds Config"
             DataClassification = CustomerContent;
             Caption = 'Active';
         }
-        field(7; "Max Retries"; Integer)
-        {
-            DataClassification = CustomerContent;
-            Caption = 'Max Retries';
-            MinValue = 0;
-        }
     }
 
     keys
@@ -99,18 +93,18 @@ table 50100 "Task Seconds Config"
     var
         Started: Boolean;
     begin
+        Rec.InsertMessage('Task started.', false);
         Started := StartSession(Rec."Current Session ID", Codeunit::"Task Seconds Runner", CompanyName, Rec);
         if Started then begin
             Rec."Current Server Instance ID" := ServiceInstanceId();
             Rec.Modify(true);
-            Rec.InsertMessage('Task started.', false);
             exit(true);
         end;
 
         exit(false);
     end;
 
-    procedure StopTask(StopSession: Boolean)
+    procedure StopTask(StopSession: Boolean; InsertLogMsg: Boolean)
     begin
         if StopSession and (Rec."Current Session ID" <> 0) then
             StopSession(Rec."Current Session ID", 'Stopped task seconds session.');
@@ -118,7 +112,14 @@ table 50100 "Task Seconds Config"
         Rec."Current Server Instance ID" := 0;
         Rec."Current Session ID" := 0;
         Rec.Modify(true);
-        Rec.InsertMessage('Task stopped.', false);
+
+        if InsertLogMsg then
+            Rec.InsertMessage('Task stopped.', false);
+    end;
+
+    procedure StopTask(StopSession: Boolean)
+    begin
+        StopTask(StopSession, true);
     end;
 
     procedure InsertMessage(Message: Text; IsError: Boolean)
@@ -126,34 +127,12 @@ table 50100 "Task Seconds Config"
         TaskSecondsLog: Record "Task Seconds Log";
     begin
         TaskSecondsLog.InsertLogMessage(Rec, Message, IsError);
+        Commit();
     end;
 
     procedure InsertError(ErrorMsg: Text)
     begin
         InsertMessage(ErrorMsg, true);
-    end;
-
-    procedure CheckMaxRetries()
-    var
-        TaskSecondsLog: Record "Task Seconds Log";
-        Retries: Integer;
-    begin
-        TaskSecondsLog.SetRange("Codeunit ID", Rec."Codeunit ID");
-        TaskSecondsLog.SetRange("Server Instance ID", Rec."Current Server Instance ID");
-        TaskSecondsLog.Ascending(false);
-        if TaskSecondsLog.FindSet() then
-            repeat
-                if not TaskSecondsLog."Is Error" then
-                    exit;
-
-                Retries += 1;
-            until (TaskSecondsLog.Next() < 1) or (Retries = Rec."Max Retries");
-
-        if Retries = Rec."Max Retries" then begin
-            StopTask(true);
-            Rec.Active := false;
-            Rec.Modify(true);
-        end;
     end;
 
 }

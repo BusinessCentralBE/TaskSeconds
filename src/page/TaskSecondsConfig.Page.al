@@ -58,11 +58,6 @@ page 50100 "Task Seconds Config"
                     ApplicationArea = All;
                     StyleExpr = ConfigStyleExpr;
                 }
-                field("Max Retries"; Rec."Max Retries")
-                {
-                    ApplicationArea = All;
-                    StyleExpr = ConfigStyleExpr;
-                }
                 field("Current Server Instance ID"; Rec."Current Server Instance ID")
                 {
                     ApplicationArea = All;
@@ -95,9 +90,7 @@ page 50100 "Task Seconds Config"
 
                 trigger OnAction()
                 begin
-                    Rec."Current Server Instance ID" := 0;
-                    Rec."Current Session ID" := 0;
-                    Rec.Modify(true);
+                    Rec.StopTask(false, false);
                 end;
             }
             action(StopCurrentSession)
@@ -109,12 +102,7 @@ page 50100 "Task Seconds Config"
 
                 trigger OnAction()
                 begin
-                    if Rec."Current Session ID" > 0 then
-                        if StopSession(Rec."Current Session ID") then begin
-                            Rec."Current Server Instance ID" := 0;
-                            Rec."Current Session ID" := 0;
-                            Rec.Modify(true);
-                        end;
+                    Rec.StopTask(true);
                 end;
             }
             action(StartStarterJob)
@@ -149,6 +137,7 @@ page 50100 "Task Seconds Config"
                         if JobQueueEntry.Status <> JobQueueEntry.Status::Ready then
                             JobQueueEntry.Restart();
                     end;
+                    CurrPage.Update(false);
                 end;
             }
         }
